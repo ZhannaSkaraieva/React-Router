@@ -1,0 +1,15 @@
+button {
+    font-size: large;
+    background-color: rgb(75, 92, 187);
+    padding: 30px;
+    text-align: center;
+}
+
+.contact {
+   display: block;
+  justify-content: center; 
+  align-items: center; 
+  height: 500px;
+  text-align: center;
+    
+}
