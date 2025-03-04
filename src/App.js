@@ -15,7 +15,8 @@ function App() {
                         <NavLink to="/" >Головна</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/about" >Про нас</NavLink>
+                        <NavLink to="/about" style={({ isActive }) => ({
+                        color: isActive ? "brown" : "black",})}>Про нас</NavLink>
                     </li>
                     <li>
                         <NavLink to="/contact">Контакт</NavLink>
@@ -23,10 +24,11 @@ function App() {
                 </ul>
             </nav>
          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<h1>404 - Сторінка не знайдена</h1>} />
+                <Route path="/" element={<Home />} /> {/*"/" на каком url будет отображаться компонент Home*/}
+                {/*element - это параметр (пропс), который принимает компонент, который будет отображаться на экране*/}
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<h1>404 - Сторінка не знайдена</h1>} />
         </Routes>
         </div>
     );
